@@ -37,13 +37,28 @@ content="width=device-width, initial-scale=1.0">
 </head>
 <script>
 
-let currentSound = null;
+let sounds = [];
 
 function playSound(file) {
 
-currentSound = new Audio(file);
+let sound = new Audio(file);
 
-currentSound.play();
+sounds.push(sound);
+
+sound.play();
+
+}
+
+function stopSound() {
+
+sounds.forEach(function(sound) {
+
+sound.pause();
+sound.currentTime = 0;
+
+});
+
+sounds = [];
 
 }
 
