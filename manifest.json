@@ -1,0 +1,9 @@
+{
+  "name": "TARDIS Soundboard",
+  "short_name": "TARDIS",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#202d8f",
+  "orientation": "portrait"
+}
