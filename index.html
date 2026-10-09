@@ -47,29 +47,30 @@ sounds.push(sound);
 
 sound.play();
 
+sound.onended = function() {
+
+let index = sounds.indexOf(sound);
+
+if (index !== -1) {
+
+sounds.splice(index, 1);
+
+}
+
+};
+
 }
 
 function stopSound() {
 
-sounds.forEach(function(sound) {
+for (let i = 0; i < sounds.length; i++) {
 
-sound.pause();
-sound.currentTime = 0;
+sounds[i].pause();
+sounds[i].currentTime = 0;
 
-});
+}
 
 sounds = [];
-
-}
-
-function stopSound() {
-
-if (currentSound) {
-
-currentSound.pause();
-currentSound.currentTime = 0;
-
-}
 
 }
 
